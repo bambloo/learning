@@ -1,16 +1,30 @@
 
-> HTML
+<pre>abcdef    fjeifeij</pre>
+---
+This is a normal paragraph:
+
+    This is a code block.
+
+<p>This is a normal paragraph:</p>
+
+<pre><code>This is a code block.
+</code></pre>
+---
+Here is an example of AppleScript:
+
+    tell application "Foo"
+        beep
+    end tell
 
 
-> emphasis
+<p>Here is an example of AppleScript:</p>
 
-*Something to emphasis*
+<pre><code>tell application "Foo"
+    beep
+end tell
+</code></pre>
 
-> Quoting
-
-
-> Block Quoting
->
->> nested blockquote
-> 
-> Something new
+---
+    <div class="footer">
+        &copy; 2004 Foo Corporation
+    </div>
