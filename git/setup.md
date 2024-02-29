@@ -13,7 +13,7 @@ git config --global [--set] user.name eliu
 git config --local user.name eliu
 ```
 
-It seems useless on github, while git log shows:
+It seems useless on github, while `git log` shows:
 ```
 commit da565b7500f84ef976525b3b1ab080142da8b5b0 (HEAD -> main, origin/main, origin/HEAD)
 Author: eliu <liugchome2004@163.com>
