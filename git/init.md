@@ -1,4 +1,4 @@
-# Turn a Local directory into a Git Repository
+# Turn a local directory into a Git Repository
 Change current directory to your project:
 
     cd my_project
