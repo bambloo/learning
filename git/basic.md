@@ -79,3 +79,51 @@ see:
 # Move File
 
     git mv README.md README
+
+# Commit History
+
+    $ git log --stat --patch
+    commit 5f4a23c325cb4c4f54dfed80325b0968924921bd (HEAD -> master)
+    Author: Eric Liu <liugchome2004@163.com>
+    Date:   Sun Mar 3 23:58:24 2024 +0800
+
+        Test commit
+
+--stat:
+
+    ---
+    README.md | 1 +
+    1 file changed, 1 insertion(+)
+
+--patch:
+
+    diff --git a/README.md b/README.md
+    new file mode 100644
+    index 0000000..fec5601
+    --- /dev/null
+    +++ b/README.md
+    @@ -0,0 +1 @@
+    +# Hello
+
+oneline option:
+
+    $ git log --oneline
+    5f4a23c (HEAD -> master) Test commit
+
+    $ git log --pretty=oneline
+    5f4a23c325cb4c4f54dfed80325b0968924921bd (HEAD -> master) Test commit
+
+Filt by file:
+
+    $ git log -- path/to/file
+
+## Some useful options:
+| Option            | Description
+|:----------        |:------------------------------
+|  \-\<n\>          | Show only the last n commits.
+|--since, --after   |Limit the commits to those made after the specified date.
+|--until, --before  |Limit the commits to those made before the specified date.
+|--author           |Only show commits in which the author entry matches the specified string.
+|--committer        |Only show commits in which the committer entry matches the specified string.
+|--grep             |Only show commits with a commit message containing the string.
+|-S                 |Only show commits adding or removing code matching the string.
