@@ -92,4 +92,4 @@ change `bare` in `.git/config` from true to false, and do it again:
 
 Success! It tells that the only difference between bare and origin repos is whether it's code can be directly checkout.
 
-
+It tells us, as long as you has a protocol who can access the file system directly, the git can be used to put your code under version controlling.
