@@ -127,3 +127,64 @@ Filt by file:
 |--committer        |Only show commits in which the committer entry matches the specified string.
 |--grep             |Only show commits with a commit message containing the string.
 |-S                 |Only show commits adding or removing code matching the string.
+
+# Restore Modification
+
+Commit Forgotten Files:
+
+    $ git commit -m "commit message"
+    $ git add forgotten_file
+    $ git commit --amend
+
+Unstaging a Staged File:
+
+    $ git restore --staged README.md
+
+Unmodifying a Modified File
+
+    $ git restore README.md
+
+
+# Git Reset
+
+`git reset` is a useful tool in version control. It's target is to change the state of current HEAD ref.
+
+* `git reset --soft [commit]` means remove all commits after {commit}, while modification caches in commits were held.
+* `git reset --mixed [commit]` means remove all commits and modification caches after {commit}.
+* `git reset --hard [commit]` means all commits and modification index will be cleaned, even the newly modified working directory files.
+
+Let's test it:
+
+    echo "a.txt" > a.txt
+    git add "a.txt"
+    git commit -m "a.txt"
+
+    echo "b.txt" > b.txt
+    git add "b.txt"
+    git commit -m "b.txt"
+
+after `git reset --soft 2e1de6d22663c49c9bb86dc28b6f2229dab3a71e`:
+
+    $ git status .
+    On branch master
+    Your branch is based on 'origin/master', but the upstream is gone.
+    (use "git branch --unset-upstream" to fixup)
+
+    Changes to be committed:
+    (use "git restore --staged <file>..." to unstage)
+            new file:   b.txt
+
+after `git reset --mixed 2e1de6d22663c49c9bb86dc28b6f2229dab3a71e`:
+
+    $ git status .
+    On branch master
+    Your branch is based on 'origin/master', but the upstream is gone.
+    (use "git branch --unset-upstream" to fixup)
+
+    Untracked files:
+    (use "git add <file>..." to include in what will be committed)
+            b.txt
+
+    nothing added to commit but untracked files present (use "git add" to track)
+
+after `git reset --hard 2e1de6d22663c49c9bb86dc28b6f2229dab3a71e`, b.txt(tracked) in working directory is removed.
