@@ -66,7 +66,7 @@ add `-a` option to automatically add files already tracked.
 
 ## Deep in
 
-After commit, there was a commit-object located at `objects/2e/e874a3bc828e0b4b0a720c3cbbb8473edc7c93` and a index-object at `objects/89/807efe1600c4786b7f695c30a8d13438baf314`.
+After commit, there was a commit-object located at `objects/2e/e874a3bc828e0b4b0a720c3cbbb8473edc7c93` and a index-object(tree) at `objects/89/807efe1600c4786b7f695c30a8d13438baf314`.
 
 see:
 * `prepare_index` in `commit.c`
