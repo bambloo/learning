@@ -9,7 +9,7 @@ After that *Extract layer.tar* from the tarball.
 
 # Install
 
-    wsl import 
+    wsl --import Fedora39 M:\wsl\fedora39 M:\wsl\fedora-39-rootfs.tar
 
 # Config
 
