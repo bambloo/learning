@@ -15,7 +15,7 @@ After that *Extract layer.tar* from the tarball.
 
 automount linux partition on startup:
 
-    REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "Mount PhysicalDrive3" /t REG_SZ /F /D "C:\Windows\System32\wsl.exe --mount \.\PHYSICALDRIVE3 --partition 2"
+    REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /V "Mount PhysicalDrive3" /t REG_SZ /F /D "C:\Windows\System32\wsl.exe --mount \\.\PHYSICALDRIVE3 --partition 2"
 
 edit /etc/wsl.conf under wsl:
 
