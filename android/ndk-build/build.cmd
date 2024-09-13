@@ -1,0 +1,1 @@
+I:\Android\Sdk\ndk\27.0.11902837\ndk-build NDK_PROJECT_PATH=. APP_BUILD_SCRIPT=./Android.mk
